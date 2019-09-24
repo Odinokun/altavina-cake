@@ -1,17 +1,16 @@
 extends ../_template
 
 block variables
-  - var title       = 'Odinokun`s start template'
-  - var description = 'Odinokun`s start template'
-  - var ogtitle     = 'Odinokun`s start template'
-  - var ogimage     = 'assets/img/social.jpg'
+  - var title       = 'Alta Vina'
+  - var description = 'Alta Vina'
 
 block content
-  .main-wrap.no-js.index
+  .main-wrap.no-js
     include ../sections/header
 
     //begin content
-    section.main
+    section.main.index
+      include ../sections/index-top
+      include ../sections/index-items
+      include ../sections/index-slider
     //end content
-
-    include ../sections/footer

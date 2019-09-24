@@ -1,0 +1,21 @@
+.index-top{
+  background-image: url('../img/bg-index-top.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+  .container {
+    min-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.index-top__title{
+  max-width: 810px;
+  color: $highlight;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
