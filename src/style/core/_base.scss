@@ -160,6 +160,53 @@ ol > *:not(li) {
   padding: 0 30px;
 }
 
+.title {
+  display: block;
+  margin: 0 0 40px 0;
+  text-align: center;
+
+  @include max(640) {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  span {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 27px;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+
+    @include max(640) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      width: 67px;
+      height: 51px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+
+      @include max(640) {
+        display: none;
+      }
+    }
+    &::before {
+      left: -80px;
+    }
+    &::after {
+      right: -80px;
+    }
+  }
+}
+
 // скрываем все слайды кроме первого
 // при отключенном JS
 // .slick-slide исправить на текущий класс

@@ -1,0 +1,61 @@
+extends ../_template
+
+mixin results-accordion__row(date, className)
+  //begin results-accordion__row
+  div(class="results-accordion__row " + className)
+    .results-accordion__date
+      .results-accordion__date-text #{date}
+      .results-accordion__date-btn
+        +svg('arr-right')
+    //begin results-accordion__info
+    .results-accordion__info-wrap
+      .results-accordion__info
+        .results-accordion__info-left
+          .results-accordion__info-title Победители:
+          .results-accordion__info-winners
+            span Иван  П. ***-9256
+            span Антон Д. ***-1247
+            span Алиса П. ***-9524
+            span Иван  П. ***-4735
+            span Антон Д. ***-1425
+            span Алиса П. ***-6714
+            span Иван  П. ***-9256
+            span Антон Д. ***-1247
+            span Алиса П. ***-9524
+            span Иван  П. ***-4735
+            span Антон Д. ***-1425
+            span Алиса П. ***-6714
+
+        .results-accordion__info-right
+          .results-accordion__info-video
+            iframe(src="https://www.youtube-nocookie.com/embed/Bey4XXJAqS8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    //end results-accordion__info
+  //end results-accordion__row
+
+
+block variables
+  - var title       = 'Alta Vina'
+  - var description = 'Alta Vina'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.results
+      .container
+        h2.results__title.title
+          span Итоги розыгрышей
+
+        //begin results-accordion
+        .results-accordion
+          +results-accordion__row('01.10 - 06.10', '')
+          +results-accordion__row('07.10 - 13.10', '')
+          +results-accordion__row('14.10 - 20.10', 'disabled')
+          +results-accordion__row('21.10 - 27.10', 'disabled')
+          +results-accordion__row('Розыгрыш главного приза', 'disabled')
+        //end results-accordion
+
+        .stok-rules
+          a(href="#") Правила акции
+    //end content
