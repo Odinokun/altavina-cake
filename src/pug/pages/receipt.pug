@@ -11,4 +11,21 @@ block content
     //begin content
     main.main.receipt
       .container
+        //begin receipt-block
+        .receipt-block
+          .receipt-blank
+            img(src="assets/img/receipt.png" alt="picture")
+          .receipt-form
+            h3.receipt-form__title Введите код с чека чтобы зажечь звезду:
+            form
+              .receipt-form__input-wrap
+                input(placeholder='Введите код здесь').receipt-form__input
+                input(type='submit' value='').receipt-form__submit
+                +svg('arr-right')
+        //end receipt-block
+
+        .stok-rules
+          a(href="#") Правила акции
+
+
     //end content
