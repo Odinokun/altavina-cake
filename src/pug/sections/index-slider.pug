@@ -1,0 +1,27 @@
+mixin index-slider__slide(pic, text)
+  .index-slider__slide
+    .index-slider__pic
+      img(src="assets/img/index-slide-" + pic + ".jpg" alt="picture")
+    span.index-slider__text #{text}
+
+
+//begin index-slider
+.index-slider
+  .container
+    h2.index-slider__title
+      span Призы
+    //begin index-slider__list
+    .index-slider__list#index-slider__list
+      +index-slider__slide('01', 'Вино-сюрприз')
+      +index-slider__slide('02', 'Коньяк Кюве Сентенер')
+      +index-slider__slide('03', 'Сертификат Ginza')
+      +index-slider__slide('04', 'Сертификат RoyalThai')
+      +index-slider__slide('01', 'Вино-сюрприз')
+      +index-slider__slide('02', 'Коньяк Кюве Сентенер')
+      +index-slider__slide('03', 'Сертификат Ginza')
+      +index-slider__slide('04', 'Сертификат RoyalThai')
+    //end index-slider__list
+
+    .stok-rules
+      a(href="#") Правила акции
+//end index-slider

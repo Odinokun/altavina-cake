@@ -1,4 +1,30 @@
-// begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
-// end header
+//begin header
+header.header
+  a(href="#").header__logo
+    img(src="assets/img/logo.svg" alt="logo")
+  .header__burger-open
+    img(src="assets/img/burger.svg" alt="picture")
+
+  //begin header__menu
+  .header__menu#header__menu
+    a(href="#").header__logo-mobile
+      img(src="assets/img/logo-mobile.svg" alt="logo")
+    .header__burger-close
+      img(src="assets/img/close.svg" alt="picture")
+
+    nav.menu
+      ul.menu__list
+        li.menu__item
+          a(href="#").menu__link Призы
+        li.menu__item
+          a(href="#").menu__link Ввести код
+        li.menu__item
+          a(href="#").menu__link Зажечь звезды
+        li.menu__item
+          a(href="#").menu__link.active Итоги розыгрышей
+        li.menu__item
+          a(href="#").menu__link Вопрос / Ответ
+        li.menu__item
+          a(href="#").menu__link Правила участия
+  //end header__menu
+//end header

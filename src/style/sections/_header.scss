@@ -1,0 +1,159 @@
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 7px 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+
+  @include max(768) {
+    justify-content: center;
+  }
+}
+
+.header__logo {
+  padding-top: 4px;
+
+  img {
+    display: block;
+    width: 100%;
+
+    @include max(1130) {
+      width: 148px;
+      height: 45px;
+    }
+  }
+}
+
+.header__burger-open {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  bottom: 0;
+  display: none;
+  width: 36px;
+  height: 18px;
+  margin: auto;
+  cursor: pointer;
+
+  @include max(1130) {
+    display: block;
+  }
+  @include max(768) {
+    right: 20px;
+  }
+}
+
+.header__menu {
+  @include max(1130) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    margin: auto;
+    background-image: linear-gradient(to right, #cda948 0%, #e6cf33 100%);
+  }
+}
+
+.header__logo-mobile {
+  display: none;
+  width: 164px;
+  margin: 0 auto 15px;
+  padding-top: 15px;
+
+  @include max(1130) {
+    display: block;
+  }
+}
+
+.header__burger-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  display: none;
+  cursor: pointer;
+
+  @include max(1130) {
+    display: block;
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @include max(1130) {
+    flex-direction: column;
+    border-top: 1px solid #d9c756;
+  }
+}
+
+.menu__item {
+  padding: 0 0 0 40px;
+  list-style: none;
+
+  @include max(1130) {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid #d9c756;
+  }
+}
+
+.menu__link {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  transition: color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #424242;
+
+  @include max(1130) {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  &.active,
+  &:hover {
+    color: $highlight;
+
+    @include max(1130) {
+      color: #fff;
+    }
+    &::before {
+      width: 100%;
+      content: '';
+    }
+  }
+  &.active {
+    pointer-events: none;
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    transition: width .5s;
+    background-color: $highlight;
+
+    @include max(1130) {
+      background-color: #fff;
+    }
+  }
+}
