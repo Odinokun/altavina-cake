@@ -62,19 +62,17 @@
 }
 
 .slick-prev {
-  left: -10px;
-}
+  left: -5px;
 
-[dir='rtl'] .slick-prev {
-  right: -10px;
-  left: auto;
+  @include max(640) {
+    left: -15px;
+  }
 }
 
 .slick-next {
-  right: -10px;
-}
+  right: -5px;
 
-[dir='rtl'] .slick-next {
-  right: auto;
-  left: -10px;
+  @include max(640) {
+    right: -15px;
+  }
 }

@@ -1,11 +1,28 @@
 .index-slider {
-  padding-bottom: 200px;
+  padding-bottom: 30px;
+
+  .container {
+    @include max(640) {
+      padding: 0;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    @include max(640) {
+      display: none !important;
+    }
+  }
 }
 
 .index-slider__title {
   display: block;
   margin: 0 0 30px 0;
   text-align: center;
+
+  @include max(640) {
+    padding-left: 30px;
+    text-align: left;
+  }
 
   span {
     font-size: 30px;
@@ -14,6 +31,11 @@
     position: relative;
     display: inline-block;
     margin: 0 auto;
+
+    @include max(640) {
+      font-size: 22px;
+      line-height: 27px;
+    }
     &::before,
     &::after {
       position: absolute;
@@ -24,6 +46,10 @@
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
+
+      @include max(640) {
+        display: none;
+      }
     }
     &::before {
       left: -80px;
@@ -37,12 +63,40 @@
 }
 
 .index-slider__list {
-  width: 100%;
+  position: relative;
+  width: calc(100% + 30px);
   margin-bottom: 58px;
+  margin-left: -15px;
+
+  @include max(640) {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  &::before {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 25px;
+    content: '';
+    background-color: #fff;
+
+    @include max(640) {
+      display: block;
+    }
+  }
 }
 
 .index-slider__slide {
+  padding: 0 15px;
   text-align: center;
+
+  @include max(640) {
+    padding: 0 5px;
+  }
 }
 
 .index-slider__pic {
@@ -50,13 +104,18 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-width: calc(100% - 30px);
-  max-width: 270px;
   height: 270px;
   margin: 0 auto 14px;
   border: 1px solid #dfdfdf;
   border-radius: 2px;
   background-color: #fff;
+
+  @include max(1130) {
+    height: 240px;
+  }
+  @include max(640) {
+    height: 100px;
+  }
   img {
     display: block;
     max-width: 95%;
@@ -83,7 +142,7 @@
     text-decoration: underline;
     color: #141615;
     &:hover {
-        text-decoration: none;
+      text-decoration: none;
       color: $highlight;
     }
     &::before {
