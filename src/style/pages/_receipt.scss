@@ -1,0 +1,17 @@
+.receipt {
+  padding: 100px 0;
+  background-image: url('../img/bg-receipt-left.svg'), url('../img/bg-receipt-right.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 2% 100px, 98% 20px;
+
+  @include max(640) {
+    padding: 30px 0;
+    background-image: url('../img/bg-receipt-mobile.svg');
+    background-position: 50% -100px;
+    background-size: contain;
+  }
+  @include max(425) {
+    background-position: 50% -40px;
+
+  }
+}
