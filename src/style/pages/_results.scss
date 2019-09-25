@@ -1,14 +1,13 @@
 .results {
   padding: 100px 0;
-  //  background-image: url('../img/bg-faq-left.svg'), url('../img/bg-faq-right.svg');
-  //  background-repeat: no-repeat, no-repeat;
-  //  background-position: 100px -60px, calc(100% + 300px) -180px;
-  //
+  background-image: url('../img/bg-results-left.svg'), url('../img/bg-results-right.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: -80px 100px, calc(100% + 30px) 20px;
 
   @include max(640) {
     padding: 30px 0;
-    //    background-image: url('../img/bg-faq-left.svg'), url('../img/bg-faq-mobile-right.svg');
-    //    background-position: -50px -60px, 100% -20px;
+    background-image: url('../img/bg-results-mobile-left.svg'), url('../img/bg-results-mobile-right.svg');
+    background-position: -30px -40px, 100% 150px;
   }
 }
 
@@ -35,6 +34,7 @@
   @include max(640) {
     padding: 13px 0;
   }
+
   &.disabled {
     pointer-events: none;
   }
