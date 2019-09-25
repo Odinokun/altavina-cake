@@ -1,0 +1,43 @@
+extends ../_template
+
+mixin faq-accordion__row(question)
+  //begin faq-accordion__row
+  .faq-accordion__row
+    .faq-accordion__question
+      .faq-accordion__question-btn
+      .faq-accordion__question-text #{question}
+    .faq-accordion__answer
+      span По  мере проведения розыгрышей мы публикуем видео каждого розыгрыша (либо ссылка, либо виджет Ютуб) и список победителей  с указанием призов.
+  //end faq-accordion__row
+
+
+block variables
+  - var title       = 'Alta Vina'
+  - var description = 'Alta Vina'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.faq
+      .container
+        h2.faq__title
+          span Часто задаваемые вопросы
+
+        //begin faq-accordion
+        .faq-accordion
+          +faq-accordion__row('Как принять участие в розыгрыше?')
+          +faq-accordion__row('Как получить дополнительные звезды?')
+          +faq-accordion__row('Мне не пришло смс. Что делать?')
+          +faq-accordion__row('Могу ли я принять участие в акции?')
+          +faq-accordion__row('Какой порядок выдачи призов?')
+          +faq-accordion__row('Нужно ли мне сохранять чек?')
+          +faq-accordion__row('Какие призы я могу получить?')
+          +faq-accordion__row('Как определяется победитель?')
+          +faq-accordion__row('Какие покупки попадают в акцию?')
+        //end faq-accordion
+
+        .stok-rules
+          a(href="#") Правила акции
+    //end content

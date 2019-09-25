@@ -9,6 +9,9 @@ $(function() {
   // begin menu
   require('./modules/menu')();
 
+  // begin accordion
+  require('./modules/accordion')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 
