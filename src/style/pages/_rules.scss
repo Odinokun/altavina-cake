@@ -1,0 +1,110 @@
+.rules {
+  padding: 100px 0;
+  background-image: url('../img/bg-rules-left.svg'), url('../img/bg-rules-right.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: -100px 50%, calc(100% + 100px) 50%;
+
+  @include max(640) {
+    padding: 30px 0;
+    background-image: url('../img/bg-rules-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }
+}
+
+.rules__title {
+  display: block;
+  margin: 0 0 40px 0;
+  text-align: center;
+
+  @include max(640) {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  span {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 27px;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+
+    @include max(640) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      width: 67px;
+      height: 51px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+
+      @include max(640) {
+        display: none;
+      }
+    }
+    &::before {
+      left: -80px;
+      background-image: url('../img/title-rules-decor-left.svg');
+    }
+    &::after {
+      right: -80px;
+      background-image: url('../img/title-rules-decor-right.svg');
+    }
+  }
+}
+
+.rules__list {
+  margin: 0;
+  list-style: none;
+  counter-reset: li;
+  li:before {
+    margin-left: -47px;
+    padding-right: 20px;
+    content: counters(li, '.') ' ';
+    counter-increment: li;
+
+    @include max(768) {
+      margin-left: -38px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.rules__list--master {
+  padding-left: 0;
+
+  column-width: auto;
+  column-count: 2;
+  column-gap: 90px;
+  @include max(768) {
+    column-gap: 40px;
+  }
+  @include max(640) {
+    column-count: 1;
+  }
+  & > li {
+    visibility: hidden;
+  }
+}
+
+.rules__list--slave {
+  li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    visibility: visible;
+    color: #646464;
+
+    &:first-child {
+      margin-top: -25px;
+    }
+  }
+}
