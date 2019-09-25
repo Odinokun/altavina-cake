@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'results',
     'faq',
     'rules',
     'index'

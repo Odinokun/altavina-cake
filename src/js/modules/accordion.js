@@ -1,6 +1,6 @@
 module.exports = function() {
 
-  // begin accordion
+  // begin accordion FAQ
   $('.faq-accordion__question').on('click', function() {
     if ($(this).hasClass('active')){
       $(this).removeClass('active');
@@ -12,6 +12,20 @@ module.exports = function() {
       $(this).siblings('.faq-accordion__answer').slideDown();
     }
   });
-  // end accordion
+  // end accordion FAQ
+
+  // begin accordion RESULTS
+  $('.results-accordion__date').on('click', function() {
+    if ($(this).hasClass('active')){
+      $(this).removeClass('active');
+      $(this).siblings('.results-accordion__info-wrap').slideUp();
+    } else {
+      $('.results-accordion__date').removeClass('active');
+      $('.results-accordion__info-wrap').slideUp();
+      $(this).addClass('active');
+      $(this).siblings('.results-accordion__info-wrap').slideDown();
+    }
+  });
+  // end accordion RESULTS
 
 };
