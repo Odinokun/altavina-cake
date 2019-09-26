@@ -1,0 +1,496 @@
+.cake {
+  padding: 100px 0;
+
+  @include max(640) {
+    padding: 30px 0;
+  background-image: url('../img/bg-cake-section-mobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+  }
+  .container {
+    @include max(640) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+.cake__title {
+  @include max(640) {
+    display: none;
+  }
+  span {
+    &::before {
+      background-image: url('../img/title-cake-decor-left.svg');
+    }
+    &::after {
+      background-image: url('../img/title-cake-decor-right.svg');
+    }
+  }
+}
+
+.cake-section {
+  position: relative;
+  padding-top: 50px;
+  background-image: url('../img/bg-cake-section.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @include max(640) {
+    margin-bottom: 40px;
+    background-image: none;
+  }
+}
+
+.cake-section__img {
+  position: relative;
+  width: 100%;
+  max-width: 755px;
+  margin: 70px auto 0;
+
+  @include max(1130) {
+    max-width: 700px;
+  }
+  @include max(1000) {
+    max-width: 500px;
+    margin-top: 0;
+  }
+  @include max(768) {
+    max-width: 450px;
+  }
+  @include max(640) {
+    max-width: 300px;
+  }
+  @include max(375) {
+    margin: 0;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cake-section__date {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  span {
+    font-family: $title;
+    line-height: 22px;
+    color: #b28fab;
+
+    @include max(1000) {
+      line-height: 1.1;
+    }
+
+    &:first-child {
+      font-size: 25px;
+
+      @include max(1000) {
+        font-size: 20px;
+      }
+      @include max(640) {
+        font-size: 12px;
+      }
+    }
+    &:last-child {
+      font-size: 16px;
+
+      @include max(1000) {
+        font-size: 14px;
+      }
+      @include max(640) {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+.cake-section__date--04 {
+  right: 130px;
+  bottom: 505px;
+
+  @include max(1130) {
+    bottom: 465px;
+  }
+  @include max(1000) {
+    right: 80px;
+    bottom: 335px;
+  }
+  @include max(768) {
+    bottom: 295px;
+  }
+  @include max(640) {
+    right: 50px;
+    bottom: 200px;
+  }
+}
+
+.cake-section__date--03 {
+  bottom: 365px;
+  left: 80px;
+
+  @include max(1130) {
+    bottom: 340px;
+  }
+  @include max(1000) {
+    bottom: 240px;
+    left: 60px;
+  }
+  @include max(768) {
+    bottom: 210px;
+  }
+  @include max(640) {
+    bottom: 145px;
+    left: 35px;
+  }
+}
+
+.cake-section__date--02 {
+  right: 50px;
+  bottom: 245px;
+
+  @include max(1130) {
+    bottom: 225px;
+  }
+  @include max(1000) {
+    right: 30px;
+    bottom: 160px;
+  }
+  @include max(768) {
+    bottom: 140px;
+  }
+  @include max(640) {
+    right: 20px;
+    bottom: 97px;
+  }
+}
+
+.cake-section__date--01 {
+  bottom: 100px;
+  left: 50px;
+
+  @include max(1130) {
+    bottom: 95px;
+  }
+  @include max(1000) {
+    bottom: 65px;
+    left: 30px;
+  }
+  @include max(768) {
+    bottom: 60px;
+  }
+  @include max(640) {
+    bottom: 41px;
+    left: 27px;
+  }
+}
+
+.cake-section__right-stars {
+  position: absolute;
+  right: 0;
+  bottom: 75px;
+
+  @include max(768) {
+    bottom: 20px;
+  }
+  svg {
+    width: 112px;
+
+    @include max(1000) {
+      width: 70px;
+      height: auto;
+    }
+    @include max(640) {
+      width: 53px;
+    }
+  }
+}
+
+.cake-section__right-stars-numb {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 25px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+
+  @include max(1000) {
+    font-size: 20px;
+  }
+  @include max(640) {
+    font-size: 15px;
+  }
+}
+
+.cake-section__right-stars-numb--04 {
+  bottom: 425px;
+
+  @include max(1000) {
+    bottom: 260px;
+  }
+  @include max(640) {
+    bottom: 193px;
+  }
+}
+
+.cake-section__right-stars-numb--03 {
+  bottom: 295px;
+
+  @include max(1000) {
+    bottom: 180px;
+  }
+  @include max(640) {
+    bottom: 132px;
+  }
+}
+
+.cake-section__right-stars-numb--02 {
+  bottom: 165px;
+
+  @include max(1000) {
+    bottom: 97px;
+  }
+  @include max(640) {
+    bottom: 70px;
+  }
+}
+
+.cake-section__right-stars-numb--01 {
+  bottom: 35px;
+
+  @include max(1000) {
+    bottom: 16px;
+  }
+  @include max(640) {
+    bottom: 9px;
+  }
+}
+
+.cake-info{
+  @include max(640) {
+    background-image: url('../img/bg-cake-info-left.svg'), url('../img/bg-cake-info-right.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 5% 50%, 95% 50%;
+    background-size: contain, auto;
+  }
+}
+.cake-info__subtitle {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+  text-align: center;
+  color: #141615;
+
+  @include max(1000) {
+    font-size: 30px;
+  }
+  @include max(640) {
+    font-size: 25px;
+  }
+  &::before {
+    position: absolute;
+    right: -10px;
+    bottom: -35px;
+    left: -10px;
+    width: 370px;
+    height: 25px;
+    margin: auto;
+    content: '';
+    background-image: url('../img/cake-info-subtitle.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+
+    @include max(1000) {
+      width: 310px;
+    }
+    @include max(640) {
+      width: 250px;
+    }
+  }
+  span {
+    font-weight: 700;
+    color: #ceaa48;
+  }
+}
+
+.cake-info__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 60px;
+  text-align: center;
+  color: #646464;
+
+  @include max(640) {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  span {
+    font-size: 22px;
+    color: #ceaa48;
+
+    @include max(640) {
+      font-size: 20px;
+    }
+  }
+}
+
+.cake-info__btn {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 60px;
+  margin: 15px auto 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #141615;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #cda948 0%, #e6cf33 100%);
+
+  @include max(640) {
+    width: 200px;
+    height: 50px;
+    margin: 20px auto 30px;
+  }
+
+  &:hover {
+    color: #141615;
+  }
+}
+
+.cake-form__wrap {
+  max-width: 1500px;
+  margin: 0 auto 10px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-image: url('../img/bg-cake-form-left.svg'), url('../img/bg-cake-form-right.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 100% 0;
+
+  @include max(640) {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+  }
+}
+
+.cake-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 10px;
+  border: 15px solid #f7f1cc;
+
+  @include max(768) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include max(640) {
+    height: auto;
+    border: none;
+  }
+  form {
+    width: 100%;
+    max-width: 441px;
+
+    @include max(1000) {
+      max-width: 350px;
+    }
+  }
+}
+
+.cake-form__title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-right: 20px;
+  color: #141615;
+
+  @include max(768) {
+    padding-right: 0;
+  }
+  @include max(640) {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.cake-form__input-wrap {
+  position: relative;
+  flex: none;
+  width: 100%;
+  max-width: 461px;
+  padding-left: 20px;
+
+  @include max(768) {
+    padding-left: 0;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    bottom: 0;
+    fill: #fff;
+    width: 10px;
+    height: 17px;
+    margin: auto;
+    pointer-events: none;
+
+    @include max(640) {
+      right: 20px;
+    }
+  }
+}
+
+.cake-form__input {
+  font-size: 14px;
+  line-height: 70px;
+  width: 100%;
+  height: 70px;
+  padding-right: 80px;
+  padding-left: 30px;
+  color: #8e8e8e;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px !important;
+  background-color: #fff;
+
+  @include placeholder-color(#8e8e8e);
+  @include max(640) {
+    height: 50px;
+    padding-right: 60px;
+    padding-left: 20px;
+  }
+}
+
+.cake-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(to right, #cda948 0%, #e6cf33 100%);
+  box-shadow: none;
+
+  @include max(640) {
+    width: 50px;
+    height: 50px;
+  }
+}

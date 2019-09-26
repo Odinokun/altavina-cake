@@ -5,11 +5,7 @@
 @import 'core/base';
 
 //elements
-// @import 'elements/breadcrumbs';
-// @import 'elements/burger';
-// @import 'elements/pagination';
-//@import 'elements/popup';
- @import 'elements/slickBase';
+@import 'elements/slickBase';
 
 //section
 @import 'sections/header';
@@ -23,3 +19,4 @@
 @import 'pages/faq';
 @import 'pages/results';
 @import 'pages/receipt';
+@import 'pages/cake';
