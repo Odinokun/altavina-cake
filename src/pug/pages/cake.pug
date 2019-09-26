@@ -1,0 +1,86 @@
+extends ../_template
+
+block variables
+  - var title       = 'Alta Vina'
+  - var description = 'Alta Vina'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.cake
+      .container
+        h2.cake__title.title
+          span Зажечь звезды
+
+        //begin cake-section
+        .cake-section
+          //begin cake-section__img
+          .cake-section__img
+            include ../elements/cake
+            //img(src="assets/img/cake.svg" alt="cake")
+            .cake-section__date.cake-section__date--04
+              span 21-27
+              span октября
+            .cake-section__date.cake-section__date--03
+              span 14-20
+              span октября
+            .cake-section__date.cake-section__date--02
+              span 7-13
+              span октября
+            .cake-section__date.cake-section__date--01
+              span 1-6
+              span октября
+            .cake-section__star.cake-section__star--04
+          //end cake-section__img
+
+          //begin cake-section__right-stars
+          .cake-section__right-stars
+            include ../elements/right-stars
+            .cake-section__right-stars-numb.cake-section__right-stars-numb--04 0
+            .cake-section__right-stars-numb.cake-section__right-stars-numb--03 0
+            .cake-section__right-stars-numb.cake-section__right-stars-numb--02 0
+            .cake-section__right-stars-numb.cake-section__right-stars-numb--01 12
+          //end cake-section__right-stars
+        //end cake-section
+
+        //begin cake-info
+        .cake-info
+          //begin cake-info__subtitle
+          .cake-info__subtitle
+            |Ты зажег
+            =' '
+            span 12
+            =' '
+            |звезд!
+          //end cake-info__subtitle
+
+          //begin cake-info__text
+          .cake-info__text
+            |У тебя
+            =' '
+            span 0
+            =' '
+            |не зажженных звезд
+          //end cake-info__text
+
+          a(href="#").cake-info__btn Зажечь звезду
+        //end cake-info
+          
+      //begin cake-form
+      .cake-form__wrap
+        .container
+          .cake-form
+            h3.cake-form__title Есть промокод на звезду? Вводи!
+            form
+              .cake-form__input-wrap
+                input(placeholder='Введите код здесь').cake-form__input
+                input(type='submit' value='').cake-form__submit
+                +svg('arr-right')
+
+      //end cake-form
+
+      .stok-rules
+        a(href="rules.html") Правила акции
+    //end content

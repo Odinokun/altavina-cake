@@ -7,15 +7,18 @@
   @include max(1650) {
     background-size: auto, contain;
   }
+
   @include max(1440) {
     background-size: contain, contain;
   }
+
   @include max(640) {
     padding: 30px 0;
     background-image: url('../img/bg-receipt-mobile.svg');
     background-position: 50% -120px;
     background-size: contain;
   }
+
   @include max(425) {
     background-position: 50% -60px;
   }
@@ -47,16 +50,19 @@
   @include max(1130) {
     left: 30px;
   }
+
   @include max(880) {
     top: -40px;
     left: 10px;
     width: 300px;
   }
+
   @include max(768) {
     top: -15px;
     left: 0;
     width: 250px;
   }
+
   @include max(640) {
     position: relative;
     top: 0;
@@ -64,6 +70,7 @@
     width: 100%;
     max-width: 350px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -77,6 +84,7 @@
   @include max(768) {
     width: 55%;
   }
+
   @include max(640) {
     width: 100%;
     max-width: 320px;
@@ -103,6 +111,7 @@
   @include max(640) {
     width: 315px;
   }
+
   svg {
     position: absolute;
     top: 0;
@@ -133,6 +142,7 @@
   background-color: #fff;
 
   @include placeholder-color(#8e8e8e);
+
   @include max(640) {
     height: 50px;
     padding-right: 60px;

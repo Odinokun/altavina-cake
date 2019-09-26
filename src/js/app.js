@@ -12,16 +12,7 @@ $(function() {
   // begin accordion
   require('./modules/accordion')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
   // begin Slick slider
   require('./modules/slick')();
-
-  // begin Popup
-  // require('./modules/popup')();
-
-  // begin Fancybox3
-  // require('./modules/fancybox')();
 
 });
