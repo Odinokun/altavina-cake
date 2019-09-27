@@ -3,7 +3,7 @@
 
   .container {
     @include max(640) {
-      padding: 0;
+      overflow: hidden;
     }
   }
   .slick-prev {
@@ -23,7 +23,7 @@
 
 .index-slider__title {
   @include max(640) {
-    padding-left: 30px;
+    padding-left: 5px;
   }
 
   span {
@@ -48,14 +48,20 @@
     margin-left: 0;
   }
 
+  .slick-list {
+    @include max(640) {
+      overflow: visible !important;
+    }
+  }
+
   &::before {
     position: absolute;
     z-index: 5;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -30px;
     display: none;
-    width: 25px;
+    width: 30px;
     content: '';
     background-color: #fff;
 
@@ -88,7 +94,6 @@
   @include max(1130) {
     height: 240px;
   }
-
   @include max(640) {
     height: 100px;
   }
