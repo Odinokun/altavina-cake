@@ -5,6 +5,10 @@
   @include max(1130) {
     margin-top: 70px;
   }
+  @include maxh(800) {
+  padding: 60px 0;
+    margin-top: 70px;
+  }
   @include max(640) {
     padding: 30px 0;
     background-image: url('../img/bg-cake-section-mobile.png');
@@ -42,6 +46,9 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
 
+  @include maxh(730) {
+    padding-top: 30px;
+  }
   @include max(640) {
     margin-bottom: 40px;
     background-image: none;
@@ -57,7 +64,14 @@
   @include max(1130) {
     max-width: 700px;
   }
+  @include maxh(800) {
+    max-width: 700px;
+  }
   @include max(1000) {
+    max-width: 500px;
+    margin-top: 0;
+  }
+  @include maxh(730) {
     max-width: 500px;
     margin-top: 0;
   }
@@ -125,11 +139,17 @@
     @include max(1000) {
       line-height: 1.1;
     }
+    @include maxh(730) {
+      line-height: 1.1;
+    }
 
     &:first-child {
       font-size: 25px;
 
       @include max(1000) {
+        font-size: 20px;
+      }
+      @include maxh(730) {
         font-size: 20px;
       }
       @include max(640) {
@@ -140,6 +160,9 @@
       font-size: 16px;
 
       @include max(1000) {
+        font-size: 14px;
+      }
+      @include maxh(730) {
         font-size: 14px;
       }
       @include max(640) {
@@ -156,7 +179,14 @@
   @include max(1130) {
     bottom: 465px;
   }
+  @include maxh(800) {
+    bottom: 465px;
+  }
   @include max(1000) {
+    right: 80px;
+    bottom: 335px;
+  }
+  @include maxh(730) {
     right: 80px;
     bottom: 335px;
   }
@@ -176,7 +206,14 @@
   @include max(1130) {
     bottom: 340px;
   }
+  @include maxh(800) {
+    bottom: 340px;
+  }
   @include max(1000) {
+    bottom: 240px;
+    left: 60px;
+  }
+  @include maxh(730) {
     bottom: 240px;
     left: 60px;
   }
@@ -196,7 +233,14 @@
   @include max(1130) {
     bottom: 225px;
   }
+  @include maxh(800) {
+    bottom: 225px;
+  }
   @include max(1000) {
+    right: 30px;
+    bottom: 160px;
+  }
+  @include maxh(730) {
     right: 30px;
     bottom: 160px;
   }
@@ -216,7 +260,14 @@
   @include max(1130) {
     bottom: 95px;
   }
+  @include maxh(800) {
+    bottom: 95px;
+  }
   @include max(1000) {
+    bottom: 65px;
+    left: 30px;
+  }
+  @include maxh(730) {
     bottom: 65px;
     left: 30px;
   }
@@ -246,14 +297,34 @@
       width: 70px;
       height: auto;
     }
+    @include maxh(730) {
+      width: 70px;
+      height: auto;
+    }
     @include max(640) {
       width: 53px;
     }
 
     .active {
-      fill: $highlight;
-      fill: url('#3kmfa');
+      animation: activeStar 2s forwards ease-in-out;
+      pointer-events: none;
     }
+  }
+}
+
+@keyframes activeStar {
+  0% {
+    fill: #aed9db;
+  }
+  50% {
+    fill: #e6cf33;
+  }
+  99% {
+    fill: $highlight;
+  }
+  100% {
+    fill: $highlight;
+    fill: url('#3kmfa');
   }
 }
 
@@ -264,9 +335,13 @@
   position: absolute;
   width: 100%;
   text-align: center;
+  pointer-events: none;
   color: #fff;
 
   @include max(1000) {
+    font-size: 20px;
+  }
+  @include maxh(730) {
     font-size: 20px;
   }
   @include max(640) {
@@ -280,6 +355,9 @@
   @include max(1000) {
     bottom: 260px;
   }
+  @include maxh(730) {
+    bottom: 260px;
+  }
   @include max(640) {
     bottom: 193px;
   }
@@ -289,6 +367,9 @@
   bottom: 295px;
 
   @include max(1000) {
+    bottom: 180px;
+  }
+  @include maxh(730) {
     bottom: 180px;
   }
   @include max(640) {
@@ -302,6 +383,9 @@
   @include max(1000) {
     bottom: 97px;
   }
+  @include maxh(730) {
+    bottom: 97px;
+  }
   @include max(640) {
     bottom: 70px;
   }
@@ -311,6 +395,9 @@
   bottom: 35px;
 
   @include max(1000) {
+    bottom: 16px;
+  }
+  @include maxh(730) {
     bottom: 16px;
   }
   @include max(640) {
@@ -338,6 +425,9 @@
   @include max(1000) {
     font-size: 30px;
   }
+  @include maxh(730) {
+    font-size: 30px;
+  }
   @include max(640) {
     font-size: 25px;
   }
@@ -357,6 +447,9 @@
     background-size: contain;
 
     @include max(1000) {
+      width: 310px;
+    }
+    @include maxh(730) {
       width: 310px;
     }
     @include max(640) {

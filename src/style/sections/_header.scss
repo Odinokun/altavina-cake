@@ -12,10 +12,10 @@
   padding: 15px 30px 7px 30px;
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+
   @include max(1130) {
     height: 70px;
   }
-
   @include max(768) {
     justify-content: center;
   }
@@ -49,7 +49,6 @@
   @include max(1130) {
     display: block;
   }
-
   @include max(768) {
     right: 20px;
   }
@@ -71,12 +70,19 @@
 
 .header__logo-mobile {
   display: none;
-  width: 164px;
+  width: 148px;
   margin: 0 auto 15px;
-  padding-top: 15px;
+  margin-bottom: 10px;
+  padding-top: 20px;
 
   @include max(1130) {
     display: block;
+  }
+
+  img {
+    display: block;
+    width: 148px;
+    height: 45px;
   }
 }
 
