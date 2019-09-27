@@ -1,5 +1,19 @@
 //begin cake
 svg(xmlns='http://www.w3.org/2000/svg', width='755', height='674', viewBox='0 0 755 674')
+  defs
+    style.
+      .highlight, .white {
+        filter: url('#filter');
+      }
+    filter#filter(width='100', height='120')
+      fegaussianblur(result='blur', stdDeviation='7.333', in='SourceAlpha')
+      fecomposite(result='composite')
+      fecomposite(result='composite-2')
+      fecomposite(result='composite-3')
+      feflood(result='flood', flood-color='#fff2a9', flood-opacity='0.25')
+      fecomposite(result='composite-4', operator='in', in2='composite-3')
+      feblend(result='blend', in2='SourceGraphic')
+      feblend(result='blend-2', in='SourceGraphic')
   g
     g
       g

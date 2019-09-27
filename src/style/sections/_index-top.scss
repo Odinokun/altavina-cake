@@ -1,4 +1,5 @@
 .index-top {
+  margin-top: 90px;
   margin-bottom: 40px;
   background-color: #5fbabe;
   background-image: url('../img/bg-index-top.png');
@@ -6,6 +7,9 @@
   background-position: 50% 50%;
   background-size: cover;
 
+  @include max(1130) {
+    margin-top: 70px;
+  }
   @include max(640) {
     margin-bottom: 20px;
   }

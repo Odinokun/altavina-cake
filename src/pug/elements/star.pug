@@ -1,0 +1,16 @@
+svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='86', height='86', viewBox='0 0 86 86')
+  defs
+    style.
+      .cls-1 {
+        filter: url(#filter);
+      }
+    filter#filter(x='80', y='223', width='86', height='86', filterUnits='userSpaceOnUse')
+      fegaussianblur(result='blur', stdDeviation='7.333', in='SourceAlpha')
+      fecomposite(result='composite')
+      fecomposite(result='composite-2')
+      fecomposite(result='composite-3')
+      feflood(result='flood', flood-color='#fff2a9', flood-opacity='0.55')
+      fecomposite(result='composite-4', operator='in', in2='composite-3')
+      feblend(result='blend', in2='SourceGraphic')
+      feblend(result='blend-2', in='SourceGraphic')
+  path.cls-1(d='M131.581,287l-2.144-15.965,14.555-7.916-15.7-1.587-3.2-17.542-6.87,16.357L101,256.052l12.139,13.066-8.13,13.515,15.06-6.909L131.581,287')

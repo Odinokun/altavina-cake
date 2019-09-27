@@ -1,12 +1,20 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 90px;
   padding: 15px 30px 7px 30px;
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  @include max(1130) {
+    height: 70px;
+  }
 
   @include max(768) {
     justify-content: center;
@@ -41,6 +49,7 @@
   @include max(1130) {
     display: block;
   }
+
   @include max(768) {
     right: 20px;
   }
@@ -125,6 +134,7 @@
     font-weight: 700;
     color: #fff;
   }
+
   &.active,
   &:hover {
     color: $highlight;
@@ -132,13 +142,11 @@
     @include max(1130) {
       color: #fff;
     }
+
     &::before {
       width: 100%;
       content: '';
     }
-  }
-  &.active {
-    pointer-events: none;
   }
   &::before {
     position: absolute;

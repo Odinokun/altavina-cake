@@ -1,4 +1,5 @@
 .receipt {
+  margin-top: 90px;
   padding: 150px 0 100px 0;
   background-image: url('../img/bg-receipt-top.svg'), url('../img/bg-receipt-bottom.svg');
   background-repeat: no-repeat, no-repeat;
@@ -10,6 +11,9 @@
 
   @include max(1440) {
     background-size: contain, contain;
+  }
+  @include max(1130) {
+    margin-top: 70px;
   }
 
   @include max(640) {

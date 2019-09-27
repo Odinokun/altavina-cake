@@ -16,7 +16,10 @@ module.exports = function() {
       {
         breakpoint: 641,
         settings: {
+          touchThreshold:40,
           slidesToShow: 3,
+          slidesToScroll: 2,
+          swipeToSlide: true,
           centerMode: true,
           centerPadding: '25px'
         }

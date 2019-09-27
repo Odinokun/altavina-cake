@@ -1,9 +1,13 @@
 .faq {
+  margin-top: 90px;
   padding: 100px 0;
   background-image: url('../img/bg-faq-left.svg'), url('../img/bg-faq-right.svg');
   background-repeat: no-repeat, no-repeat;
   background-position: 100px -60px, calc(100% + 300px) -180px;
 
+  @include max(1130) {
+    margin-top: 70px;
+  }
   @include max(640) {
     padding: 30px 0;
     background-image: url('../img/bg-faq-left.svg'), url('../img/bg-faq-mobile-right.svg');
@@ -111,6 +115,7 @@
   @include max(640) {
     padding-top: 10px;
   }
+
   span {
     font-size: 16px;
     font-weight: 400;
